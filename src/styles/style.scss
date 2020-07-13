@@ -1,0 +1,63 @@
+@import "~materialize-css/sass/materialize";
+@import "auth";
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.blur {
+  filter: blur(4px);
+}
+
+.nav-wrapper {
+  @media (min-width: 700px) {
+    padding-left: 15px;
+  }
+}
+
+.form-dish {
+  @media (max-width: 700px) {
+    width: 95%;
+  }
+}
+
+nav {
+  background-color: #26a69a;
+}
+
+
+
+@media (min-width: 700px) {
+  .btn {
+    &-submit {
+      margin-top: 23px;
+    }
+    //&-type {
+    //  margin-top: 23px;
+    //}
+    //&-subtype {
+    //  margin-top: 23px;
+    //}
+  }
+}
+
+#submit-dish-type, #submit-dish-subtype {
+  margin-top: 23px;
+}
+
+table {
+  .name {
+    max-width: 20%;
+  }
+  .description {
+    max-width: 40%;
+  }
+  .weight {
+    max-width: 15%;
+  }
+  .price {
+    max-width: 15%;
+  }
+}
