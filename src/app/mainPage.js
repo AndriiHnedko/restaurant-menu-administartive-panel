@@ -4,43 +4,7 @@ import {Dish} from './menu'
 export function getMainPage() {
     const root = document.getElementById('root')
     return root.innerHTML = `
-
-      <div class="row form-dish-type">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s10 l11">
-              <input id="input-dish-type" type="text" class="validate">
-              <label for="input-dish-type">Create dish type</label>
-            </div>
-            <button 
-            class="btn waves-effect waves-light col s2 l1 btn-submit" 
-            type="submit" 
-            name="action" 
-            id="submit-dish-type" 
-            disabled
-            >Submit</button>
-          </div>
-        </form>
-      </div>
-      
-      <div class="row form-dish-subtype">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s10 l11">
-              <input id="input-dish-subtype" type="text" class="validate">
-              <label for="input-dish-subtype">Create dish subtype</label>
-            </div>
-            <button 
-            class="btn waves-effect waves-light col s2 l1 btn-submit" 
-            type="submit" 
-            name="action" 
-            id="submit-dish-subtype" 
-            disabled
-            >Submit</button>
-          </div>
-        </form>
-      </div>
-      
+     
       <div class="row form-dish">
         <form class="col s12" id="form">
           <div class="row">
@@ -48,9 +12,6 @@ export function getMainPage() {
             <div class="input-field col s6 l2" id="dish-type">
               <select>
                 <option value="" disabled selected>Choose dish type</option>
-                <option value="1">Option 1.1</option>
-                <option value="2">Option 1.2</option>
-                <option value="3">Option 1.3</option>
               </select>
             </div>
       

@@ -33,3 +33,7 @@ export function authWithEmailAndPassword(email, password) {
         .then(responce => responce.json())
         .then(data => data.idToken)
 }
+
+export function validateInput(input) {
+    return input.value.length >= 4
+}

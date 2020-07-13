@@ -16,8 +16,9 @@ if (!localStorage.getItem('token')) {
 } else {
     rootPage.innerHTML = getHeader()
     rootPage.innerHTML += getMainPage()
-    logicHeader()
+
     logicMainPage()
+    logicHeader()
     Dish.read()
 }
 
