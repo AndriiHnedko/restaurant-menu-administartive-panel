@@ -5,6 +5,7 @@ import {getMainPage, logicMainPage} from './app/mainPage'
 import {Dish} from './app/menu'
 
 
+console.log('test')
 
 const rootPage = document.getElementById('root')
 
