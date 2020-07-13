@@ -2,14 +2,9 @@
 @import "auth";
 
 body {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
-
-.blur {
-  filter: blur(4px);
-}
 
 .nav-wrapper {
   @media (min-width: 700px) {

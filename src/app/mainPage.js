@@ -20,7 +20,7 @@ export function getMainPage() {
         <li><a class="log-out">Log out</a></li>
       </ul>
       
-    <div class="row form-dish-type">
+      <div class="row form-dish-type">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s10 l11">
@@ -118,8 +118,6 @@ export function getMainPage() {
 
         <tbody id="table-root"></tbody>
       </table>
-       
-      
     `
 }
 

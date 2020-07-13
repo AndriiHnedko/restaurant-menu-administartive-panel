@@ -1,7 +1,7 @@
 {
-  "name": "restaurant-menu",
+  "name": "restaurant-menu-adminisstrative-panel",
   "version": "1.0.0",
-  "description": "restaurant menu",
+  "description": "restaurant menu adminisstrative panel",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --host 192.168.0.103",
