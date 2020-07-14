@@ -52,6 +52,8 @@ export function getMainPage() {
       <table class="highlight">
         <thead>
           <tr>
+            <th class="dish-type-table">Dish type</th>
+            <th class="dish-subtype-table">Dish subtype</th>
             <th class="name">Name</th>
             <th class="description">Description</th>
             <th class="weight">Weight(g)</th>

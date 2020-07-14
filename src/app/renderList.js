@@ -1,6 +1,8 @@
 export function renderListDish(response) {
     document.getElementById('table-root').innerHTML += `
           <tr>
+            <td>${response.dishType}</td>
+            <td>${response.dishSubtype}</td>
             <td>${response.dishName}</td>
             <td>${response.dishDescription}</td>
             <td>${response.dishWeight}</td>
