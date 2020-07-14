@@ -19,7 +19,6 @@ export function renderListDishTypeModal(response, tableId) {
 
 export function renderListDishTypeList(response, count, listId) {
     const dishTypeList = document.getElementById(listId)
-    console.log(dishTypeList)
     dishTypeList.innerHTML += `
         <option value="${count}">${response}</option>
     `

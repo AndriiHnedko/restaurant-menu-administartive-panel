@@ -81,6 +81,19 @@ export function getHeader() {
             </form>
           </div>
         </div>
+        
+     
+        <table  class="highlight">
+            <thead>
+              <tr>
+                  <th>Dish subtype</th>
+              </tr>
+            </thead>
+    
+            <tbody id="dish-subtype-table"></tbody>
+        </table>
+    
+        
         <div class="modal-footer">
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
@@ -149,5 +162,33 @@ export function logicHeader() {
     const formDishSubtype = document.querySelector('.form-dish-subtype')
     const inputDishSubtype = formDishSubtype.querySelector('#input-dish-subtype')
     const submitDishSubtype = formDishSubtype.querySelector('#submit-dish-subtype')
+
+    formDishSubtype.addEventListener('submit', submitDishSubtypeFormHandler)
+
+    Dish.getDishSubtype()
+
+    inputDishSubtype.addEventListener('input', () => {
+        submitDishSubtype.disabled = !validateInput(inputDishSubtype)
+    })
+
+    function submitDishSubtypeFormHandler (event) {
+        // turn off the auto reboot page when interacting with the form
+        event.preventDefault()
+
+        // create dish subtype object
+        if (validateInput(inputDishSubtype)) {
+            const dishType = inputDishSubtype.value.trim()
+            submitDishSubtype.disabled = true
+            // async request to server to save dish subtype
+            Dish.createDishSubtype(dishType).then(() => {
+                inputDishSubtype.value = ''
+                inputDishSubtype.classList.remove('valid')
+                submitDishSubtype.disabled = false
+                Dish.getDishSubtype()
+            })
+        } else {
+            console.log('err')
+        }
+    }
 
 }

@@ -16,11 +16,8 @@ export function getMainPage() {
             </div>
       
             <div class="input-field col s6 l2" id="dish-subtype">
-              <select>
+              <select id="dish-subtype-list">
                 <option value="" disabled selected>Choose dish subtype</option>
-                <option value="1">Option 2.1</option>
-                <option value="2">Option 2.2</option>
-                <option value="3">Option 2.3</option>
               </select>
             </div>
           

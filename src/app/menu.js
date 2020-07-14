@@ -59,6 +59,23 @@ export class Dish {
             })
     }
 
+    static getDishSubtype () {
+
+        document.getElementById('dish-subtype-table').innerHTML = ''
+        return fetch(`${firebase}/dishsubtype.json`)
+            .then(response => response.json())
+            .then(response => {
+                let count = 0
+                for (let key in response) {
+                    count++
+                    renderListDishTypeModal(response[key], 'dish-subtype-table')
+                    renderListDishTypeList(response[key], count, 'dish-subtype-list')
+                }
+                let elems = document.querySelectorAll('select')
+                let instances = M.FormSelect.init(elems)
+            })
+    }
+
     static read () {
         document.getElementById('table-root').innerHTML = ''
         return fetch(`${firebase}/dishs.json`)
