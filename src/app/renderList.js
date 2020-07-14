@@ -9,19 +9,19 @@ export function renderListDish(response) {
     `
 }
 
-export function renderListDishTypeModal(response) {
-    document.getElementById('dish-type-table').innerHTML += `
+export function renderListDishTypeModal(response, tableId) {
+    document.getElementById(tableId).innerHTML += `
               <tr>
                 <td>${response}</td>
               </tr>
     `
 }
 
-export function renderListDishTypeList(response) {
-
-    const dishTypeList = document.getElementById('dish-type').querySelector('select')
-    dishTypeList.innerHTML = `
-        <option value="1">${response}</option>
+export function renderListDishTypeList(response, count, listId) {
+    const dishTypeList = document.getElementById(listId)
+    console.log(dishTypeList)
+    dishTypeList.innerHTML += `
+        <option value="${count}">${response}</option>
     `
 
 }

@@ -10,7 +10,7 @@ export function getMainPage() {
           <div class="row">
                       
             <div class="input-field col s6 l2" id="dish-type">
-              <select>
+              <select id="dish-type-list">
                 <option value="" disabled selected>Choose dish type</option>
               </select>
             </div>
@@ -104,7 +104,7 @@ export function logicMainPage() {
             submitBtn.disabled = !isValid(input)
         })
     })
-     
+
 
     function submitFormHandler(event) {
         // turn off the auto reboot page when interacting with the form

@@ -43,14 +43,19 @@ export class Dish {
     }
 
     static getDishType () {
+
         document.getElementById('dish-type-table').innerHTML = ''
         return fetch(`${firebase}/dishtype.json`)
             .then(response => response.json())
             .then(response => {
+                let count = 0
                 for (let key in response) {
-                    renderListDishTypeModal(response[key])
-                    renderListDishTypeList(response[key])
+                    count++
+                    renderListDishTypeModal(response[key], 'dish-type-table')
+                    renderListDishTypeList(response[key], count, 'dish-type-list')
                 }
+                let elems = document.querySelectorAll('select')
+                let instances = M.FormSelect.init(elems)
             })
     }
 
