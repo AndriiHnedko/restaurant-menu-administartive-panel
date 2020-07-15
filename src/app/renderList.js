@@ -7,7 +7,7 @@ export function renderListDish(response) {
             <td>${response.dishDescription}</td>
             <td>${response.dishWeight}</td>
             <td>${response.dishPrice}</td>
-           </tr>
+          </tr>
     `
 }
 

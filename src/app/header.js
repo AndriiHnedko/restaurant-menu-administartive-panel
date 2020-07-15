@@ -3,6 +3,8 @@ import {Dish} from './menu'
 
 export function getHeader() {
     return `
+
+        <!-- Header-->
       <nav>
         <div class="nav-wrapper">
           <a class="brand-logo">Your restaurant</a>
@@ -23,7 +25,7 @@ export function getHeader() {
         <li><a class="log-out">Log out</a></li>
       </ul>
       
-      
+        <!-- /Header-->
         <!-- Modal Structure -->
         
       <div id="dish-type-modal" class="modal">
@@ -98,6 +100,8 @@ export function getHeader() {
           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
       </div>
+      
+      <!-- /Modal Structure -->
     `
 }
 

@@ -9,9 +9,7 @@ export function validateEmail(email) {
 }
 
 export function validateDropdownList(dropdownList) {
-    if (dropdownList.querySelector('.disabled').classList.value === 'disabled') {
-        return true
-    }
+    return dropdownList.querySelector('.disabled').classList.value !== 'disabled selected'
 }
 
 export function validatePassword(input) {

@@ -95,14 +95,11 @@ export function logicMainPage() {
     // valid form
     input.forEach(e => {
         e.addEventListener('input', () => {
-            const typeList = dishType.querySelector('input')
-            const subtypeList = dishSubtype.querySelector('input')
-
-            submitBtn.disabled = !validateDropdownList(dishType)
-            submitBtn.disabled = !validateDropdownList(dishSubtype)
-            submitBtn.disabled = !isValid(input)
+            let validateBtn = isValid(input) && validateDropdownList(dishType) && validateDropdownList(dishSubtype)
+            submitBtn.disabled = !validateBtn
         })
     })
+
 
 
     function submitFormHandler(event) {
