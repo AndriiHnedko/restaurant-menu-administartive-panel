@@ -43,7 +43,7 @@ export class Dish {
     }
 
     static getDishType () {
-
+        document.getElementById('dish-type-list').innerHTML = `<option value="" disabled selected>Choose dish type</option>`
         document.getElementById('dish-type-table').innerHTML = ''
         return fetch(`${firebase}/dishtype.json`)
             .then(response => response.json())
@@ -60,7 +60,7 @@ export class Dish {
     }
 
     static getDishSubtype () {
-
+        document.getElementById('dish-subtype-list').innerHTML = `<option value="" disabled selected>Choose dish subtype</option>`
         document.getElementById('dish-subtype-table').innerHTML = ''
         return fetch(`${firebase}/dishsubtype.json`)
             .then(response => response.json())
